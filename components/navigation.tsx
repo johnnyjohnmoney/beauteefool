@@ -52,9 +52,11 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white">
-              Book Now
-            </Button>
+            <Link href="/booking">
+              <Button className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white">
+                Book Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -88,9 +90,11 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <Button className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white">
-              Book Now
-            </Button>
+            <Link href="/booking" onClick={() => setIsOpen(false)}>
+              <Button className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white">
+                Book Now
+              </Button>
+            </Link>
           </div>
         </div>
       )}

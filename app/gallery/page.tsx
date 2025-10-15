@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { GalleryCategory, getImagesByCategory } from "@/lib/gallery-data";
 import { GalleryFilter } from "@/components/gallery-filter";
@@ -91,16 +92,19 @@ export default function GalleryPage() {
           >
             Book your appointment today and let our experts bring out your natural beauty
           </motion.p>
-          <motion.a
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            href="/#contact"
-            className="inline-block bg-white text-pink-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-50 transition-colors shadow-lg hover:shadow-xl"
           >
-            Book Now
-          </motion.a>
+            <Link
+              href="/booking"
+              className="inline-block bg-white text-pink-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-50 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Book Now
+            </Link>
+          </motion.div>
         </div>
       </div>
 

@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import Link from "next/link";
 
 export function CTASection() {
   return (
@@ -57,35 +58,30 @@ export function CTASection() {
                 </div>
               </div>
 
-              {/* Right side - Quick Contact Form */}
+              {/* Right side - Quick Booking CTA */}
               <Card className="p-8 bg-white/95 dark:bg-black/95 backdrop-blur-sm">
-                <h3 className="text-2xl font-bold mb-6 text-neutral-800 dark:text-white">
-                  Quick Booking
+                <h3 className="text-2xl font-bold mb-4 text-neutral-800 dark:text-white">
+                  Ready to Book?
                 </h3>
-                <form className="space-y-4">
-                  <div>
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Your name" className="mt-1" />
-                  </div>
-                  <div>
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" className="mt-1" />
-                  </div>
-                  <div>
-                    <Label htmlFor="service">Preferred Service</Label>
-                    <Input id="service" placeholder="e.g., Hair Styling" className="mt-1" />
-                  </div>
-                  <div>
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Any special requests?" className="mt-1" rows={3} />
-                  </div>
+                <p className="text-neutral-600 dark:text-neutral-300 mb-6">
+                  Experience our luxury beauty services. Book your appointment online in just a few clicks.
+                </p>
+                <Link href="/booking" className="block">
                   <Button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white"
+                    size="lg"
+                    className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white text-lg py-6"
                   >
-                    Book Now
+                    Book Appointment Now
                   </Button>
-                </form>
+                </Link>
+                <div className="mt-6 pt-6 border-t dark:border-neutral-700">
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400 text-center">
+                    Or call us at{' '}
+                    <a href="tel:555-123-4567" className="text-pink-600 hover:text-pink-700 font-semibold">
+                      (555) 123-4567
+                    </a>
+                  </p>
+                </div>
               </Card>
             </div>
           </div>

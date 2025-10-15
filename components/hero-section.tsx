@@ -3,6 +3,7 @@
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -38,19 +39,23 @@ export function HeroSection() {
         transition={{ delay: 0.3, duration: 0.5 }}
         className="flex gap-4 mt-10 justify-center flex-wrap"
       >
-        <Button
-          size="lg"
-          className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
-        >
-          Book Appointment
-        </Button>
-        <Button
-          size="lg"
-          variant="outline"
-          className="text-lg px-8 py-6 rounded-full border-2 border-pink-500 text-pink-500 hover:bg-pink-50 dark:hover:bg-pink-950"
-        >
-          View Services
-        </Button>
+        <Link href="/booking">
+          <Button
+            size="lg"
+            className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+          >
+            Book Appointment
+          </Button>
+        </Link>
+        <a href="#services">
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-lg px-8 py-6 rounded-full border-2 border-pink-500 text-pink-500 hover:bg-pink-50 dark:hover:bg-pink-950"
+          >
+            View Services
+          </Button>
+        </a>
       </motion.div>
     </HeroHighlight>
   );
